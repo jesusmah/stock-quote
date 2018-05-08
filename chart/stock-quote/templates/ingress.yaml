@@ -11,5 +11,5 @@ spec:
       paths:
       - path: /stock-quote/.*
         backend:
-          serviceName: {{ .Release.Name }}-{{ .Chart.Name }}
+          serviceName: stock-quote-service
           servicePort: {{ .Values.service.servicePort.https }}
