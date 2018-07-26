@@ -3,7 +3,7 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: mycluster.icp:8500/default
+  repository: ibmstocktrader
   name: stock-quote
   tag: latest
   pullPolicy: Always
@@ -25,9 +25,8 @@ secret:
     create: false
     secret_name: stocktrader-redis
     # redis://x:<YOUR_REDIS_PASSWORD>@<REDIS_SERVICE_MASTER>:<REDIS_SERVICE_MASTER_PORT>
-    url:
-    # Get your Quandl key
-    quandl_key:
+    # redis://x:redispasswd@st-redis-master:6379
+    url: cmVkaXM6Ly94OnJlZGlzcGFzc3dkQHN0LXJlZGlzLW1hc3Rlcjo2Mzc5
   jwt:
     create: false
     secret_name: stocktrader-jwt
